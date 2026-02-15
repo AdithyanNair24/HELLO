@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From my heart vaave😍😍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+    .note-container {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 90vw;
+      width: 600px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      margin: 5vh auto;
+      color: #f1a222d2;
+      animation: fadeIn 2s ease-out;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #ff4d79;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+      .note-container {
+        padding: 1.5rem;
+      }
+      .next-button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .next-button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background-color: #ff4d79;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .next-button:hover {
+      background-color: #e8436e;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline class="video-bg" id="bg-video">
+    <source src="Video Project1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video> 
+  <div class="note-container">
+    <h1>MY dear meghuzzz😘😘</h1>
+    <p>
+      From the moment you came into my life, something inside me changed in the most beautiful way. Your smile became my comfort, your voice my calm, and your presence my peace. I don’t know when liking you turned into caring, and caring turned into something I can’t imagine living without.
+
+You make ordinary days feel special and hard days feel lighter. With you, I laugh a little louder, dream a little bigger, and believe a little more. You’ve unknowingly become the reason behind my happiness and the thought I carry with me every single day.
+
+I don’t want perfection. I want you—your flaws, your dreams, your silly moments, your anger, your love. I want to be there for your smiles and your tears, to support you, respect you, and choose you every day without hesitation.
+
+So here I am, with my heart completely honest and open…
+Will you be my girlfriend (ofc u are ) be my little babay and let me hold your hand through everything life brings our way?
+    <button class="next-button" onclick="location.href='page2.html'">Your Jhalak ✨</button>
+  </div>
+  <script>
+    // Ensure background video continues playing when returning to the page
+    const video = document.getElementById('bg-video');
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        video.play().catch(() => {});
+      }
+    });
+  </script>
+</body>
+</html>
